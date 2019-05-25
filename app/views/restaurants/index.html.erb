@@ -1,0 +1,14 @@
+<div class="container">
+  <h1 class="text-center">The restaurants selected by YELP</h1>
+
+  <ul class="list-unstyled">
+    <% @restaurants.each do |restaurant| %>
+      <li>
+        <h2><%= link_to restaurant.name, restaurant_path(restaurant) %></h2>
+        <p><%= restaurant.address %></p>
+        <p><%= restaurant.phone_number %></p>
+        <h5><%= restaurant.category %></h5>
+      </li>
+    <% end %>
+  </ul>
+</div>
